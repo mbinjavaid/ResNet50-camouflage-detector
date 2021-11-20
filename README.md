@@ -5,4 +5,4 @@ In short: we chop off the fully connected head, and train a new FC head on top. 
 
 To train the model, download the CAMO-COCO dataset, first copy it into the program directory. Since the dataset_builder.py assumes a certain format, organize the folder as follows: "CAMO-COCO-1.0-DATA/Camouflage" should contain all camouflage images (no matter whether originally test or train images), and "CAMO-COCO-1.0-DATA/Non-Camouflage" should likewise contain all non-camouflage images. Then run dataset_builder.py to create a nicely organized directory of the training and validation split which will later be used in training. You may need to change the ORIG_INPUT_DATASET value in config.py to the name of the folder containing the original dataset (in my case it was CAMO-COCO-1.0-DATA).
 
-The obtained result (accuracy and loss) metrics over epochs are depicted in progress.png. The results can probably be improved quite a bit with some parameter tweaking.
+The obtained result (accuracy and loss) metrics over epochs are depicted in progress.png. The results (and what looks like a bit of overfitting) can probably be improved quite a bit with some parameter tweaking.
